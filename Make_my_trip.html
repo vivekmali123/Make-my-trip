@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make My Trip</title>
+    <style>
+     body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    .topnav {
+       overflow: hidden;
+       background-color: rgb(61, 3, 48);
+       display: block;
+       margin-top: 0%;
+
+    }
+
+    .topnav h2 {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .topnav h2:hover {
+       background-color: rgb(240, 84, 84);
+       color: rgb(23, 24, 22);
+    }
+    
+    #text{
+        text-align: center;
+        font-size: 40px;
+        /*padding: 1%;*/
+    }
+
+    .sign{
+        text-align: right;
+        position: relative;
+        left: 1050px;
+    }
+    
+    .img{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 500px;
+        bottom: 100px;
+    }
+
+    #p{
+        font-size: 16px;
+    }
+
+    #form_start{
+        text-align: center;
+    }
+
+    .info{
+        border: solid;
+        border-right: 50%;
+    }
+
+    .marquee1{
+        margin: 0 auto;
+        display: block;
+    }
+
+    .footer{
+        text-align:center;
+    }
+
+    </style>
+</head>
+<body>
+       <h1 id="text"> Make My Trip </h1>
+       <img src="download.png" class="img">
+    
+    <div class="topnav">
+        <h2>Policies</h2>
+        <h2>Plans</h2>
+        <h2>About</h2>
+        <div class="sign">
+           <h2>Sign In</h2>
+           <h2>Sign Up</h2>
+        </div>
+    </div>
+        
+   <form action="index.php" method="POST">
+        <h2 id="form_start">Fill up the Form for booking your Trip.</h2>
+       
+        <marquee class="marquee1" width="900" bgcolor: #12b525>
+            <span style="font-weight: 400; font-family: changa-one; font-style: normal; font-size:24px; color:#f51717">
+            <h3 id="p">Notice: Only a person can book a trip, who has completed both the dose of covid Vaccine.</h3>
+        </marquee>
+     
+    <h2 class="info"> Trip Planning.</h2>
+    
+    <label for="Address">Your Loaction: </label>
+    <input type="text" placeholder="Enter your Starting Location here.." size="70" width="80%"><br><br>
+    
+    <label for="Address">Destination: </label>
+    <input type="text" placeholder="Enter your Destination Address.." size="70" width="80%"><br><br>
+    
+    <label for="Address">Number of Members: </label>
+    <input type="text" placeholder="Enter Number of Members will travel.." size="50" width="80%"><br><br>
+    
+    Do all members having passport: <br>
+    <input type="radio" id="yes" name="Having passport" value="Yes" >
+    <label for="yes">Yes</label><br>
+    <input type="radio" id="no" name="Having passport" value="No" >
+    <label for="yes">No</label><br><br>
+
+    Number of Days of Plan: <br>
+    <input type="radio" id="0-5" name="Days" value="5">
+    <label for="number"> 0-5 </label><br>
+    <input type="radio" id="5-10" name="Days" value="10">
+    <label for="number"> 5-10 </label><br>
+    <input type="radio" id="10-15" name="Days" value="15">
+    <label for="number"> 10-15 </label><br>
+    <input type="radio" id="15-20" name="Days" value="20">
+    <label for="number"> 15-20 </label><br>
+    <input type="radio" id="20-25" name="Days" value="25">
+    <label for="number"> 20-25 </label><br>
+    <input type="radio" id="30-35" name="Days" value="30">
+    <label for="number"> 30-35 </label><br><br>
+
+    Select the means of Transport By which you wants to travel: <br>
+    <input type="radio" id="Bus" name="means" value="Bus">
+    <label for="Transport"> Bus/Travels </label><br>
+    <input type="radio" id="Flight" name="means" value="Flight">
+    <label for="Transport"> Flight </label><br>
+    <input type="radio" id="Car" name="means" value="Car">
+    <label for="number"> Private Vehical </label><br>
+    #By using Private Vehical you will not need to pay for the charges of travelling in trip package. You need to manage your travelling finance yourself.<br><br>
+
+    Select the hotel category you wants to stay: <br>
+    <input type="radio" id="5star" name="Hotel" value="1">
+    <label for="hotel"> 1 Star </label><br>
+    <input type="radio" id="5star" name="Hotel" value="2">
+    <label for="hotel"> 2 Star </label><br>
+    <input type="radio" id="5star" name="Hotel" value="3">
+    <label for="hotel"> 3 Star </label><br>
+    <input type="radio" id="5star" name="Hotel" value="4">
+    <label for="hotel"> 4 Star </label><br>
+    <input type="radio" id="5star" name="Hotel" value="5">
+    <label for="hotel"> 5 Star </label><br><br>
+
+    <h2 class="info"> Personal Information.</h2>
+    
+    <label for="name">Enter Names of all members: </label>
+    <textarea placeholder="Enter names of all members:.." rows="5" cols="50" ></textarea><br><br>
+
+    <label for="number">Contact Number: </label>
+    <input type="number" placeholder="Enter contact number.." size="70" width="80%"><br><br>
+
+    <label for="address">Parmanent Address: </label>
+    <input type="text" placeholder="Enter Parmanent Address.." size="70" width="80%"><br><br>
+
+    <h2 class="info"> Payment Information.</h2>
+
+    Select Payment Method: </br>
+    <input type="radio" id="card" name="payment" value="card">
+    <label for="payment"> Credit/Debit Card </label><br>
+
+    <input type="radio" id="Netbanking" name="payment" value="netbanking">
+    <label for="payment"> Net Banking </label><br>
+
+    <input type="radio" id="UPI" name="payment" value="UPI">
+    <label for="payment"> Google Pay /Phone Pay /Bhim UPI </label><br>
+
+    <input type="radio" id="cheque" name="payment" value="cheque">
+    <label for="payment"> cheque / challan </label><br><br>
+
+    <button type="submit">Submit </button>
+    <button type="reset" >Reset </button>
+    <br><br><br>
+   </form>
+
+<footer>
+    <hr style="height:2px;border-width:0;color:rgb(66, 3, 3);background-color:rgb(61, 1, 1)">
+    <h3 id="footer">Your will recive all the doucuments(Transport comfirmation, Hotel comfirmation and Payment comfirmation) and bills by mail as well as by courier</h3>
+</footer>
+
+</body>
+</html>
